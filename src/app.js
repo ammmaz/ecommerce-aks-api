@@ -9,6 +9,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Welcome Route
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Welcome to the E-Commerce API!', docs: '/health, /products, /metrics' });
+});
+
 // Health Check
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'UP', timestamp: new Date(), uptime: process.uptime() });
