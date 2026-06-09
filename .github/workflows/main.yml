@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 env:
   ACR_NAME: ecommerceacrregistry
   IMAGE_NAME: ecommerce-api
