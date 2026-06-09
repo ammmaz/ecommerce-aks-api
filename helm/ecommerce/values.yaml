@@ -31,3 +31,6 @@ resources:
 env:
   PORT: "3000"
   NODE_ENV: "production"
+
+monitoring:
+  enabled: false
