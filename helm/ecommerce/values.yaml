@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: ecommerceacrregistry.azurecr.io/ecommerce-api
   pullPolicy: IfNotPresent
-  tag: 6e1ac450cd8c0bfa18a0e89440278066b96576f1
+  tag: 4f366dddfe567824092eb2291767e9ffd27ec79c
 
 service:
   type: ClusterIP
