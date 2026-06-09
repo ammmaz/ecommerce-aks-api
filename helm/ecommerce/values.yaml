@@ -33,4 +33,4 @@ env:
   NODE_ENV: "production"
 
 monitoring:
-  enabled: false
+  enabled: true

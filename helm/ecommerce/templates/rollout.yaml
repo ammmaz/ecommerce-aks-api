@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: {{ include "ecommerce.fullname" . }}
   labels:
@@ -34,3 +34,10 @@ spec:
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
+  strategy:
+    canary:
+      steps:
+        - setWeight: 10
+        - pause: {duration: 30s}
+        - setWeight: 50
+        - pause: {duration: 30s}
